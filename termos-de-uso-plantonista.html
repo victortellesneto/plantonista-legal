@@ -1,366 +1,200 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Termos de Uso — Plantonista</title>
-  <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #F2F2F7;
-      color: #1C1C1E;
-      line-height: 1.7;
-    }
-    header {
-      background: #0B5E45;
-      color: white;
-      padding: 40px 24px 32px;
-      text-align: center;
-    }
-    header .logo img {
-      height: 64px;
-      margin-bottom: 10px;
-      filter: brightness(0) invert(1);
-    }
-    header p {
-      font-size: 14px;
-      opacity: 0.75;
-      margin-top: 6px;
-    }
-    .container {
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 32px 24px 80px;
-    }
-    .update-badge {
-      display: inline-block;
-      background: #E1F5EE;
-      color: #0B5E45;
-      font-size: 12px;
-      font-weight: 600;
-      padding: 4px 12px;
-      border-radius: 99px;
-      margin-bottom: 24px;
-    }
-    .intro {
-      background: white;
-      border-radius: 14px;
-      padding: 20px;
-      margin-bottom: 24px;
-      border-left: 4px solid #0B5E45;
-      font-size: 15px;
-      color: #3A3A3C;
-    }
-    section {
-      background: white;
-      border-radius: 14px;
-      padding: 24px;
-      margin-bottom: 16px;
-      box-shadow: 0 1px 3px rgba(0,0,0,0.06);
-    }
-    h2 {
-      font-size: 17px;
-      font-weight: 700;
-      color: #0B5E45;
-      margin-bottom: 14px;
-    }
-    h3 {
-      font-size: 15px;
-      font-weight: 600;
-      color: #1C1C1E;
-      margin: 16px 0 8px;
-    }
-    p { font-size: 14px; color: #3A3A3C; margin-bottom: 10px; }
-    p:last-child { margin-bottom: 0; }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    ul li {
-      font-size: 14px;
-      color: #3A3A3C;
-      padding: 6px 0 6px 20px;
-      position: relative;
-      border-bottom: 0.5px solid #F2F2F7;
-    }
-    ul li:last-child { border-bottom: none; }
-    ul li::before {
-      content: '•';
-      color: #0B5E45;
-      font-weight: 700;
-      position: absolute;
-      left: 4px;
-    }
-    .highlight {
-      background: #FFF3E0;
-      border-radius: 10px;
-      padding: 14px 16px;
-      margin: 14px 0;
-      font-size: 14px;
-      color: #854F0B;
-    }
-    .highlight strong { color: #5D3109; }
-    .plan-table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 14px 0;
-      font-size: 13px;
-    }
-    .plan-table th {
-      background: #0B5E45;
-      color: white;
-      padding: 10px 12px;
-      text-align: left;
-      font-weight: 600;
-    }
-    .plan-table td {
-      padding: 10px 12px;
-      border-bottom: 1px solid #F2F2F7;
-      color: #3A3A3C;
-    }
-    .plan-table tr:last-child td { border-bottom: none; }
-    .plan-table tr:nth-child(even) td { background: #F8F9FA; }
-    .contact-card {
-      background: #0B1829;
-      border-radius: 14px;
-      padding: 20px;
-      color: white;
-      margin-top: 24px;
-      text-align: center;
-    }
-    .contact-card h3 { color: white; margin-top: 0; }
-    .contact-card a {
-      color: #EF9F27;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .contact-card p { color: rgba(255,255,255,0.7); }
-    .link-privacidade {
-      text-align: center;
-      margin-top: 16px;
-    }
-    .link-privacidade a {
-      color: #0B5E45;
-      font-size: 14px;
-      font-weight: 600;
-      text-decoration: none;
-    }
-    footer {
-      text-align: center;
-      padding: 24px;
-      font-size: 12px;
-      color: #8E8E93;
-    }
-    @media (max-width: 480px) {
-      .container { padding: 20px 16px 60px; }
-      section { padding: 18px; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Termos de Uso — Plantonista</title>
+<style>
+:root {
+  --primary: #1C4A44;
+  --primary-dark: #0F2E2A;
+  --bg: #F2EEE4;
+  --card: #FFFFFF;
+  --text: #1F2A28;
+  --text-secondary: #436159;
+  --border: #DDD8CE;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; line-height: 1.6; }
+.header { background: var(--primary); color: #fff; padding: 32px 20px 28px; text-align: center; }
+.header h1 { margin: 0; font-size: 22px; font-weight: 800; }
+.header p { margin: 6px 0 0; font-size: 14px; opacity: 0.85; }
+.container { max-width: 720px; margin: -18px auto 60px; padding: 0 16px; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 28px 24px 36px; box-shadow: 0 2px 10px rgba(0,0,0,0.06); }
+.intro { font-size: 15px; color: var(--text-secondary); margin-bottom: 8px; }
+h2 { font-size: 17px; font-weight: 800; color: var(--primary-dark); margin: 32px 0 10px; padding-top: 16px; border-top: 1px solid var(--border); }
+h2:first-of-type { border-top: none; padding-top: 0; margin-top: 24px; }
+h3 { font-size: 15px; font-weight: 700; color: var(--primary); margin: 20px 0 8px; }
+p { margin: 0 0 12px; font-size: 14.5px; }
+ul, ol { margin: 0 0 14px; padding-left: 22px; }
+li { margin-bottom: 8px; font-size: 14.5px; }
+strong { color: var(--primary-dark); }
+.contact-box { background: var(--bg); border-radius: 12px; padding: 16px 18px; margin-top: 24px; }
+.contact-box p { margin: 2px 0; }
+.updated { font-size: 13px; color: var(--text-secondary); margin-top: -4px; }
+footer { max-width: 720px; margin: 0 auto 40px; padding: 0 16px; text-align: center; font-size: 12.5px; color: var(--text-secondary); }
+a { color: var(--primary); }
+</style>
 </head>
 <body>
 
-<header>
-  <div class="logo"><img src="logo-plantonista.png" alt="Plantonista"></div>
-  <p>Termos de Uso</p>
-</header>
-
-<div class="container">
-
-  <div class="update-badge">📅 Última atualização: Junho de 2026</div>
-
-  <div class="intro">
-    Ao criar uma conta e utilizar o Plantonista, você concorda com estes Termos de Uso. Leia com atenção antes de prosseguir. Se não concordar com algum ponto, não utilize o aplicativo.
-  </div>
-
-  <!-- 1. O que é o Plantonista -->
-  <section>
-    <h2>1. O que é o Plantonista</h2>
-    <p>O <strong>Plantonista</strong> é um aplicativo de gestão de plantões médicos que permite ao profissional de saúde organizar sua agenda, controlar pagamentos, emitir alertas de nota fiscal e gerar relatórios para o contador.</p>
-    <p>O app é uma ferramenta de organização pessoal e <strong>não substitui</strong> assessoria contábil, jurídica ou financeira profissional. As informações exibidas têm caráter informativo e de auxílio organizacional.</p>
-  </section>
-
-  <!-- 2. Cadastro e conta -->
-  <section>
-    <h2>2. Cadastro e conta</h2>
-    <ul>
-      <li>Para usar o Plantonista, você deve ter pelo menos 18 anos e ser um profissional de saúde</li>
-      <li>Você é responsável por manter a confidencialidade da sua senha</li>
-      <li>Não compartilhe sua conta com terceiros</li>
-      <li>Você deve fornecer informações verdadeiras no cadastro</li>
-      <li>Somente uma conta por pessoa é permitida</li>
-      <li>Notifique-nos imediatamente caso suspeite de acesso não autorizado à sua conta</li>
-    </ul>
-  </section>
-
-  <!-- 3. Planos e assinaturas -->
-  <section>
-    <h2>3. Planos e assinaturas</h2>
-
-    <h3>3.1 Trial gratuito</h3>
-    <p>Novos usuários têm acesso ao <strong>Plano Profissional completo por 30 dias</strong>, sem necessidade de cartão de crédito. Após o período de trial, o acesso é convertido automaticamente para o plano gratuito, exceto se uma assinatura for contratada.</p>
-
-    <h3>3.2 Planos disponíveis</h3>
-    <table class="plan-table">
-      <tr>
-        <th>Plano</th>
-        <th>Preço</th>
-        <th>Cobrança</th>
-      </tr>
-      <tr>
-        <td>Gratuito</td>
-        <td>R$ 0</td>
-        <td>Limitado: 2 empresas, 10 plantões/mês</td>
-      </tr>
-      <tr>
-        <td>Mensal</td>
-        <td>R$ 14,90/mês</td>
-        <td>Cobrado mensalmente</td>
-      </tr>
-      <tr>
-        <td>Anual</td>
-        <td>R$ 99,90/ano</td>
-        <td>Cobrado anualmente (~R$ 8,32/mês)</td>
-      </tr>
-      
-    </table>
-
-    <div class="highlight">
-    </div>
-
-    <h3>3.3 Cancelamento</h3>
-    <ul>
-      <li>Assinaturas mensais e anuais podem ser canceladas a qualquer momento pela App Store ou Google Play</li>
-      <li>O cancelamento encerra a renovação automática; o acesso permanece ativo até o fim do período pago</li>
-      <li>Não oferecemos reembolso proporcional por período não utilizado, exceto quando exigido pela legislação aplicável</li>
-    </ul>
-
-    <h3>3.4 Reembolsos</h3>
-    <p>Solicitações de reembolso devem ser feitas diretamente à Apple ou ao Google, conforme a plataforma utilizada para a compra, seguindo as políticas dessas plataformas.</p>
-  </section>
-
-  <!-- 4. Uso adequado -->
-  <section>
-    <h2>4. Uso adequado</h2>
-    <p>Ao utilizar o Plantonista, você concorda em:</p>
-    <ul>
-      <li>Usar o app somente para fins legais e legítimos</li>
-      <li>Não tentar acessar dados de outros usuários</li>
-      <li>Não realizar engenharia reversa, descompilar ou modificar o aplicativo</li>
-      <li>Não usar o app para armazenar informações sigilosas de pacientes (dados clínicos)</li>
-      <li>Não realizar ataques, sobrecargas ou tentativas de invasão aos nossos servidores</li>
-      <li>Não revender ou sublicenciar o acesso ao aplicativo</li>
-    </ul>
-
-    <div class="highlight">
-      <strong>Atenção:</strong> O Plantonista é destinado ao controle financeiro e de agenda do profissional. <strong>Não armazene dados clínicos de pacientes</strong> no campo de observações ou em qualquer outro campo do app — isso violaria o sigilo médico e a LGPD.
-    </div>
-  </section>
-
-  <!-- 5. Propriedade intelectual -->
-  <section>
-    <h2>5. Propriedade intelectual</h2>
-    <p>Todo o conteúdo do Plantonista — incluindo código, design, logotipo, textos, ícones e funcionalidades — é de propriedade exclusiva do Plantonista e protegido pelas leis de propriedade intelectual brasileiras e internacionais.</p>
-    <p>É vedada a reprodução, cópia, modificação ou distribuição de qualquer parte do app sem autorização prévia e expressa por escrito.</p>
-    <p>Os dados inseridos por você (plantões, empresas, valores) pertencem exclusivamente a você e podem ser exportados ou excluídos a qualquer momento.</p>
-  </section>
-
-  <!-- 6. Limitação de responsabilidade -->
-  <section>
-    <h2>6. Limitação de responsabilidade</h2>
-    <p>O Plantonista é fornecido "como está" (as is). Não garantimos que o app estará disponível ininterruptamente ou livre de erros.</p>
-    <ul>
-      <li>Não nos responsabilizamos por decisões financeiras ou profissionais tomadas com base nas informações do app</li>
-      <li>Os cálculos de impostos estimados são aproximações — consulte sempre um contador</li>
-      <li>Não garantimos a precisão dos dados de trânsito fornecidos pelo Google Maps na funcionalidade "Hora de Sair"</li>
-      <li>Não nos responsabilizamos por perda de dados causada por falha do dispositivo ou desinstalação do app</li>
-      <li>Nossa responsabilidade total, em qualquer circunstância, está limitada ao valor pago pela assinatura nos últimos 12 meses</li>
-    </ul>
-  </section>
-
-  <!-- 7. Disponibilidade -->
-  <section>
-    <h2>7. Disponibilidade do serviço</h2>
-    <p>Nos esforçamos para manter o Plantonista disponível 24 horas por dia, 7 dias por semana, mas não garantimos disponibilidade ininterrupta.</p>
-    <ul>
-      <li>Manutenções programadas serão comunicadas com antecedência sempre que possível</li>
-      <li>Falhas temporárias podem ocorrer por motivos técnicos fora do nosso controle</li>
-      <li>Nos reservamos o direito de suspender o serviço temporariamente para melhorias</li>
-    </ul>
-  </section>
-
-  <!-- 8. Alterações no app e nos planos -->
-  <section>
-    <h2>8. Alterações no app e nos planos</h2>
-    <p>Podemos, a qualquer momento:</p>
-    <ul>
-      <li>Adicionar, modificar ou remover funcionalidades do app</li>
-      <li>Ajustar os preços dos planos mensais e anuais (com aviso prévio de 30 dias)</li>
-      <li>Encerrar o serviço (com aviso prévio mínimo de 90 dias e reembolso proporcional)</li>
-    </ul>
-    <div class="highlight">
-    </div>
-  </section>
-
-  <!-- 9. Rescisão -->
-  <section>
-    <h2>9. Rescisão e suspensão de conta</h2>
-    <p>Nos reservamos o direito de suspender ou encerrar sua conta sem aviso prévio em casos de:</p>
-    <ul>
-      <li>Violação destes Termos de Uso</li>
-      <li>Uso fraudulento ou ilegal do aplicativo</li>
-      <li>Tentativas de invasão ou comprometimento da segurança</li>
-      <li>Chargebacks indevidos junto às plataformas de pagamento</li>
-    </ul>
-    <p>Em caso de encerramento por violação, não haverá reembolso de valores pagos.</p>
-  </section>
-
-  <!-- 10. Lei aplicável -->
-  <section>
-    <h2>10. Lei aplicável e foro</h2>
-    <p>Estes Termos são regidos pelas leis brasileiras, especialmente:</p>
-    <ul>
-      <li>Código de Defesa do Consumidor (Lei nº 8.078/1990)</li>
-      <li>Lei Geral de Proteção de Dados — LGPD (Lei nº 13.709/2018)</li>
-      <li>Marco Civil da Internet (Lei nº 12.965/2014)</li>
-    </ul>
-    <p>Eventuais conflitos serão resolvidos preferencialmente por mediação. Caso necessário, fica eleito o foro da comarca de São Paulo/SP como competente para dirimir quaisquer controvérsias.</p>
-  </section>
-
-  <!-- 11. Alterações nos termos -->
-  <section>
-    <h2>11. Alterações nestes Termos</h2>
-    <p>Podemos atualizar estes Termos periodicamente. Quando isso ocorrer:</p>
-    <ul>
-      <li>A data de "última atualização" no topo desta página será modificada</li>
-      <li>Alterações significativas serão comunicadas por notificação no app com antecedência mínima de 15 dias</li>
-      <li>O uso continuado do app após a vigência das alterações implica aceitação dos novos termos</li>
-      <li>Se não concordar com as alterações, você pode cancelar sua assinatura e excluir sua conta</li>
-    </ul>
-  </section>
-
-  <!-- Política de Privacidade -->
-  <div class="link-privacidade">
-    <p style="font-size:14px;color:#5A6474;margin-bottom:8px;">
-      Para informações sobre coleta e uso de dados, consulte nossa
-    </p>
-    <a href="politica-privacidade-plantonista.html">→ Política de Privacidade</a>
-  </div>
-
-  <!-- Contato -->
-  <div class="contact-card">
-    <h3>📬 Dúvidas sobre os Termos?</h3>
-    <p style="margin-top: 8px;">Entre em contato pelo e-mail:</p>
-    <p style="margin-top: 8px;"><a href="mailto:contato@plantonistaapp.com.br">contato@plantonistaapp.com.br</a></p>
-    <p style="margin-top: 12px;">Instagram: <a href="https://instagram.com/plantonistaapp">@plantonistaapp</a></p>
-  </div>
-
+<div class="header">
+  <h1>Termos de Uso</h1>
+  <p>Plantonista — Gestão de Plantões Médicos</p>
 </div>
 
-<footer>
-  © 2026 Plantonista · Todos os direitos reservados<br>
-  Estes termos estão em conformidade com o CDC, LGPD e Marco Civil da Internet
-</footer>
+<div class="container">
+  <div class="card">
+    <p class="updated"><strong>Última atualização:</strong> Junho de 2026</p>
+    <p class="intro">Estes são os Termos de Uso ("Termos") que determinam as finalidades, a utilização e os limites de todo e qualquer acesso ao aplicativo PLANTONISTA, por qualquer pessoa que se utilize de nossas ferramentas de Software como Serviço, na qualidade de "USUÁRIO". Ao criar uma conta e utilizar o Plantonista, você concorda com estes Termos de Uso. Leia com atenção antes de prosseguir.</p>
+    <p>Ao aceitar os Termos de Uso, Você compreende que, para atendermos às suas necessidades e lhe dar maior segurança, nossos serviços estão sujeitos a contínuo aprimoramento, do mesmo modo que estes Termos, os quais estarão sempre disponíveis em nosso aplicativo.</p>
+
+    <h2>1. Condições gerais</h2>
+    <ul>
+      <li>O Plantonista é um aplicativo de gestão de plantões médicos que permite ao profissional da saúde organizar sua agenda, controlar pagamentos, emitir alertas de emissão de nota fiscal e gerar relatórios para o contador.</li>
+      <li>O app é uma ferramenta de organização pessoal e não substitui assessoria contábil, jurídica ou financeira profissional.</li>
+      <li>O Plantonista foi desenvolvido e é operado exclusivamente pelo Plantonista. Portanto, é imprescindível que Você siga nossos Termos e conheça nossa Política de Privacidade para fazer uso do Plantonista e utilizar as ferramentas disponíveis, uma vez que determinadas atividades implicam no tratamento dos seus dados pessoais.</li>
+      <li>Ao acessar o Plantonista você deverá ler o conteúdo destes Termos, e, se concordar com as condições apresentadas, manifestar sua adesão, através do aceite via checkbox, atestando tal fato. O uso dos nossos produtos e serviços por Você pode se dar somente após a leitura destas Condições Gerais. Assim, sua utilização significará a concordância integral com os termos destas Condições Gerais.</li>
+      <li>A Política de Privacidade também é parte integrante deste documento e deverá ser lida com atenção e consentida por Você, como requisito para a utilização do aplicativo e dos serviços do Plantonista. Estes Termos se aplicam a todas as marcas, produtos e serviços oferecidos pelo Plantonista.</li>
+      <li>Caso você não concorde com qualquer uma das disposições destas condições gerais, não deverá usar os produtos ou serviços do Plantonista.</li>
+      <li>Ao efetivar o cadastro no Plantonista, Você declara que possui ciência e concorda plenamente com todo o conteúdo deste termo, de forma que, futuramente, não poderão ser alegados quaisquer impedimentos legais para o cumprimento das obrigações assumidas neste documento.</li>
+      <li>Caso Você venha a discordar das Condições após o aceite, o uso dos produtos e/ou serviços serão imediatamente interrompidos, sendo certo que estas Condições Gerais terão vigência durante todo o período de uso, não cabendo a Você alegar o desconhecimento destas Condições Gerais.</li>
+      <li><strong>Ainda que tenha aceitado às Condições Gerais de maneira integral, Você poderá revisar e/ou revogar o consentimento à determinadas finalidades nestes termos, quando assim expressamente indicado, por meio do nosso Canal de Atendimento de Privacidade: suporte@plantonistaapp.com.br. Entretanto, ao fazê-lo, Você compreende que isto poderá restringir, suspender ou cancelar alguns dos serviços ofertados pelo Plantonista.</strong></li>
+      <li>Ao aceitar estes Termos, Você declara:
+        <ul>
+          <li>Possuir mais de 18 anos de idade;</li>
+          <li>Ser profissional da saúde;</li>
+          <li>Ser responsável pelas consequências relacionadas à sua utilização do Plantonista, respondendo civil e criminalmente, inclusive perante terceiros, por qualquer reivindicação que venha a ser apresentada pelo Plantonista.</li>
+          <li>Que não utilizará os serviços do Plantonista para quaisquer fins ilícitos, devendo ser, sob qualquer circunstância, observada a legislação vigente;</li>
+          <li>Entender que, em caso de suspeita de ocorrência de fraude ou de atos ilícitos, seu acesso aos serviços e ao Plantonista poderão ser suspensos ou bloqueados a qualquer tempo, sem que nada lhe seja devido;</li>
+          <li><strong>Ter ciência de que deverá notificar o Plantonista, imediatamente, pelo Canal de Privacidade: suporte@plantonistaapp.com.br, sobre qualquer uso não autorizado de seus dados, sua conta ou acesso não autorizado por terceiros;</strong></li>
+          <li>Entender que o seu acesso aos Serviços por meio de conexão em redes wi-fi públicas e desprotegidas oferece risco às informações de conta em nosso aplicativo. Assim, Você declara estar ciente de que deverá assegurar a confiabilidade das redes pelas quais acessará o Plantonista, sendo de sua exclusiva responsabilidade quaisquer danos advindos do uso mediante acesso a redes públicas consideradas inseguras, uma vez que o Plantonista não possui qualquer gerência nas medidas de segurança adotadas por tais redes.</li>
+          <li>Expressamente, estar ciente de que o Plantonista, assim como os logotipos, marcas, documentação técnica associada e quaisquer outros materiais correlatos ao Serviço do aplicativo e/ou aos parceiros do Plantonista, constituem, conforme o caso, direitos autorais, segredos comerciais, e/ou direitos de propriedade intelectual ou industrial do Plantonista e/ou dos seus parceiros, sendo tais direitos protegidos pela legislação aplicável, sendo proibido a Você realizar qualquer conduta, sem a autorização prévia e por escrito do Plantonista.</li>
+        </ul>
+      </li>
+      <li>É vedado qualquer espécie de procedimento que implique em engenharia reversa, adaptação e/ou modificação do Plantonista, ou qualquer outra conduta que possibilite o acesso ao código fonte do aplicativo.</li>
+      <li>O uso do Plantonista e contratação dos serviços nele oferecidos são restritos a clientes que sejam residentes/domiciliados no Brasil e a uma conexão de internet ativa.</li>
+      <li>Para utilizar os serviços do Plantonista, Você deverá possuir um Login válido, sem o qual os produtos e serviços não poderão ser utilizados por você.</li>
+      <li>Ao efetivar o cadastro no aplicativo Você declara que possui ciência e concorda plenamente com todo o conteúdo deste termo, de forma que, futuramente, não poderão ser alegados quaisquer impedimentos legais para o cumprimento das obrigações assumidas neste documento.</li>
+      <li>O Plantonista se reserva o direito de modificar e alterar estes Termos a qualquer momento. Caso ocorra qualquer alteração nos Termos, Você será notificado para tomar ciência da atualização. Se Você discordar da nova versão dos Termos, deverá solicitar o encerramento da nossa parceria.</li>
+      <li>Se Você não solicitar o encerramento e permanecer utilizando o Plantonista mesmo após o nosso Aviso de Atualização e permanecer utilizando o aplicativo de forma contínua, entenderemos que Você aceitou as alterações e deseja continuar utilizando nossos serviços.</li>
+      <li>Nenhuma indenização lhe seja devida, seja à que título for, em razão de qualquer modificação realizada nestes Termos ou alterações realizadas no aplicativo, inclusive sua descontinuação.</li>
+    </ul>
+
+    <h2>2. Cadastro e conta</h2>
+    <ul>
+      <li>O acesso e a utilização de quaisquer serviços do Plantonista exigirão a realização de um cadastro prévio, adesão ao presente Termo, escolha de um dos planos ofertados e, a depender do plano escolhido, o respectivo pagamento pelo uso das ferramentas disponibilizadas.</li>
+      <li>Para realizar o seu cadastro e utilizar as funcionalidades do Plantonista, Você deverá fornecer seus dados cadastrais, a saber: (i) Nome completo; (ii) Especialidade médica (opcional); (iii) E-mail; (v) CRM; (vi) Endereço residencial (opcional); (vii) Dados dos plantões; (viii) Informações bancárias.</li>
+      <li>O tratamento dos dados pessoais mencionados no item 2.2., supra, será realizado em estrita conformidade com a Política de Privacidade do Plantonista, em cumprimento ao disposto pela Lei nº 13.709/2018, denominada como "Lei Geral de Proteção de Dados Pessoais".</li>
+      <li>Ao se cadastrar no Plantonista, Você deverá informar dados completos, recentes e válidos, sendo de sua exclusiva responsabilidade manter as referidas informações atualizadas.</li>
+      <li>Você também é responsável pela guarda, sigilo e utilização do login e senha cadastrados, que possuem caráter pessoal e intransferível. Deste modo, nunca deverá compartilhar seus dados de acesso com outras pessoas.</li>
+      <li>Caso seja verificado o compartilhamento indevido de tais dados, como login e senha para fins de acesso ao aplicativo por terceiros, o Plantonista irá bloquear e impedir seu acesso de forma definitiva, bem como bloquear todas as contas dos usuários envolvidos, sem a necessidade de qualquer notificação prévia.</li>
+      <li><strong>O Plantonista poderá se valer de todas as formas lícitas para verificar, a qualquer tempo, se as informações que Você forneceu são verdadeiras. Se for constatado que as informações são de alguma forma incompletas, imprecisas ou falsas, Você poderá ter o seu cadastro suspenso ou cancelado, a exclusivo critério do Plantonista, sem prejuízos de outras medidas que sejam aplicáveis, caso em que não serão devidos quaisquer reembolsos.</strong></li>
+      <li>Todos os serviços do Plantonista serão acessados pelo seu login e senha. Você declara e garante expressamente ser plenamente capaz, podendo exercer e usufruir livremente do aplicativo e dos serviços.</li>
+      <li>Caberá a Você assegurar que o seu equipamento seja compatível com as características técnicas que viabilizem a utilização do aplicativo e dos serviços, bem como em relação a quaisquer outros aplicativos necessários, incluindo conexão à internet em alta velocidade ou banda larga.</li>
+    </ul>
+
+    <h2>3. Planos e assinaturas</h2>
+    <p>Após o cadastro no Plantonista, os seguintes planos serão apresentados à Você:</p>
+    <ul>
+      <li>Plano Gratuito — R$ 0 (limitado: 2 empresas, 10 plantões/mês);</li>
+      <li>Plano Profissional Mensal — sem limitações — R$ 14,90/mês;</li>
+      <li>Plano Profissional Anual — sem limitações — R$ 129,90/ano, equivalente a ~R$ 10,82/mês (cobrado anualmente);</li>
+    </ul>
+    <ul>
+      <li><strong>Preços de lançamento:</strong> Os valores acima são promocionais e válidos por tempo limitado.</li>
+      <li><strong>Reajuste.</strong> Os valores da assinatura mensal e anual poderão ser reajustados a cada 12 (doze) meses, contados da contratação do plano, renovação ou último reajuste, conforme a periodicidade de cobrança escolhida e de acordo com a variação acumulada do IGP-M, calculado e divulgado pela Fundação Getúlio Vargas acumulada no período. Caso o índice em referência deixe de existir ou seja descontinuado, poderá ser adotado outro índice oficial que venha a substituí-lo ou, na sua ausência, outro índice que reflita a variação inflacionária do período.</li>
+      <li><strong>O Plantonista te notificará com 30 (trinta) dias de antecedência do reajuste de quaisquer valores.</strong></li>
+      <li>O Plantonista fornece para todo novo usuário do aplicativo acesso inicial ao Plano Profissional, para uso completo das funcionalidades do aplicativo, pelo período de 30 (trinta) dias, sem que haja quaisquer cobranças. Nesse caso Você terá acesso ao "período de testes", com acesso limitado às ferramentas e benefícios.</li>
+      <li>Caso Você não contrate algum dos Planos Profissionais, descritos pelos itens 3.1.2. ou 3.1.3., seu acesso será automaticamente convertido para o Plano Gratuito descrito no item 3.1.1., com todas as limitações nele descritas.</li>
+      <li>Para a contratação de um dos planos descritos pelos itens 3.1.2. ou 3.1.3., será necessário cadastrar um cartão de crédito válido nas plataformas App Store e Google Play, a fim de efetuar a cobrança do plano escolhido, bem como contará renovação automática a cada 30 (trinta) dias a contar da data de cada renovação, a depender do plano escolhido por Você.</li>
+      <li>Em caso de a aderência à um dos Planos Profissionais se dar durante o período de teste gratuito, a cobrança ocorrerá imediata e automaticamente à adesão. Caso Você cancele em até 07 (sete) dias contados da data de adesão ao referido plano, o valor cobrado será automaticamente reembolsado, conforme disposto no art. 49 do CDC e de acordo com as políticas do aplicativo de pagamento utilizado.</li>
+      <li>O período de teste de 30 (trinta) dias e o período legal de 07 (sete) dias, para fins de cumprimento legal, serão contados em ciclos de 24h (vinte e quatro horas) cada, a partir do seu primeiro cadastro no aplicativo, tendo em vista que a plataforma funciona 24h (vinte e quatro horas) por dia e 07 (sete) dias da semana, inclusive em feriados nacionais, estaduais e municipais. Não será autorizado reembolso de qualquer valor quando houver solicitação fora do prazo acima descrito.</li>
+      <li><strong>Ainda, se for constatado dois ou mais cadastros seus tentando obter acesso contínuo e permanente ao período grátis, será imediatamente autorizada a cobrança equivalente ao plano de menor valor em todos os cadastros feitos por Você.</strong></li>
+      <li>Em caso de reativação de usuário anteriormente criado, não haverá direito à estorno, visto que o teste gratuito refere-se à primeira utilização da plataforma, e o direito não se renova a cada migração de plano realizada.</li>
+      <li>Se escolhido o Plano Profissional Mensal, após a realização da cobrança, a renovação do plano se dará de forma automática a cada 30 (trinta) dias a contar da data de cada renovação.</li>
+      <li>Se escolhido o Plano Profissional Anual, após a realização da cobrança, a renovação do plano se dará de forma automática a cada 12 (doze) meses a contar da data de cada renovação.</li>
+      <li>A cobrança permanecerá sendo realizada automaticamente enquanto não ocorrer o cancelamento da assinatura, salvo condições especiais de lançamento, em caso de assinatura de planos anuais.</li>
+      <li>Você somente desfrutará do acesso completo à todas as funcionalidades do aplicativo durante a vigência de cada ciclo de teste ou assinatura paga. Em caso de cancelamento durante o período legal descrito pelo art. 49 do CDC e, havendo empresas ou plantões cadastrados que ultrapassem o limite do plano gratuito após o encerramento, não será permitido a Você cadastro de novos plantões, devendo, portanto, aguardar a renovação do ciclo do referido plano, não podendo reclamar posteriormente alegando falta de informação ou prejuízo.</li>
+      <li>Todas as consultas/benefícios disponíveis em cada plano se renovam a cada 30 (trinta) dias e não são cumulativos.</li>
+      <li><strong>Todos os Cupons de desconto e/ou Convênios que o Plantonista possa vir a criar terão benefícios e critérios de cobranças próprios, não ficando adstrito às informações dos planos padrões de assinatura disponíveis pelo presente Termo de Uso e Condições e página web. Todas as informações do cupom/convênio serão disponibilizadas no momento do cadastro para o USUÁRIO, que poderá escolher e assinar ou não o serviço.</strong></li>
+      <li><strong>Os Cupons terão validade de acordo com cada campanha publicitária, seja diretamente pelo Plantonista ou através de algum parceiro.</strong></li>
+      <li>Via de regra, os cupons de desconto serão individuais e somente poderão ser aplicados uma única vez, não sendo cumulativos com outros descontos.</li>
+    </ul>
+
+    <h2>4. Responsabilidades do usuário</h2>
+    <p><strong>Você aceita, reconhece e compromete-se a não realizar o upload de qualquer conteúdo ilícito, imoral ou ilegal que viole os direitos do Plantonista ou de terceiros, ou, viole o direito ao sigilo de informações e dados de qualquer pessoa, seja física ou jurídica.</strong></p>
+    <p>Caso seja identificada qualquer violação a este dispositivo, sua conta será imediatamente bloqueada, independente de aviso prévio.</p>
+    <p>Sem prejuízo de outras obrigações previstas neste instrumento, é sua responsabilidade:</p>
+    <ul>
+      <li>Fazer uso das funcionalidades e ferramentas do aplicativo em acordo com os Termos, e respeitando todas e quaisquer regras do ordenamento jurídico nacional, não havendo possibilidade de negar ciência sobre sua responsabilidade legal por todas as suas condutas e ações executadas no aplicativo, seja por si ou por terceiros, quando fornecido os dados de acesso de forma indevida;</li>
+      <li>Operar o aplicativo por meio de equipamentos de hardware necessários ao seu acesso e correta utilização, incluindo todas as demais ferramentas oferecidas pelo Plantonista;</li>
+      <li>Não aproveitar o aplicativo como ferramenta, meio ou instrumento de quaisquer atos ilícitos, sejam determinados atos proibidos pelo presente Termos ou por legislação específica;</li>
+      <li>Não utilizar o aplicativo com finalidade para quaisquer atos ou procedimentos que possam causar dano a direitos de terceiros ou do próprio Plantonista, incluindo ações que possam vir a prejudicar o correto funcionamento do aplicativo ou de suas ferramentas;</li>
+      <li>Observar todas as disposições, regras e orientações que constam nos Termos e cumpri-las, sem exceção;</li>
+      <li>Não compartilhar seus dados de acesso, como usuário e senha, com quaisquer pessoas;</li>
+    </ul>
+    <p><strong>É proibido à Você ou a terceiros, utilizar-se de forma comercial da assinatura do aplicativo, ou ainda, de quaisquer propriedades intelectuais do Plantonista de forma que não seja autorizada neste instrumento.</strong></p>
+    <p>O Plantonista é destinado ao controle financeiro e de agenda do profissional. De modo que é estritamente vedado à Você armazenar, por quaisquer meios, informações sigilosas de pacientes (dados pessoais e dados pessoais sensíveis), de modo que Você declara ciência de que este tipo de utilização do aplicativo viola o sigilo médico, a LGPD e o presente Termo de Uso e Condições.</p>
+
+    <h2>5. Responsabilidades do Plantonista</h2>
+    <p><strong>O Plantonista se responsabiliza em prestar o Serviço à Você, de acordo com as especificações constantes nos Termos. Caso haja qualquer instabilidade no aplicativo, o Plantonista irá comunicar imediatamente à Você.</strong></p>
+    <p><strong>O Plantonista se compromete em fornecer o Serviço observando os requisitos de segurança da informação, especialmente com a finalidade de bloquear quaisquer ameaças ao funcionamento do aplicativo, incluindo, mas não se limitando a ataques cibernéticos.</strong></p>
+
+    <h2>6. Suporte</h2>
+    <p><strong>Caso Você necessite de auxílio, suporte ou ajuda com o uso do aplicativo, poderá acionar o Plantonista por meio do Suporte via e-mail. Caso outro prazo não seja acordado, Você terá até 02 dias úteis (considerando a cidade de São Paulo/SP) para ser atendido nos períodos que compreendem: 9h às 12h e 14h às 18h.</strong></p>
+
+    <h2>7. Cancelamento</h2>
+    <p>Você pode cancelar sua assinatura dos Serviços a qualquer momento. Você terá acesso aos Serviços até a data em que sua assinatura paga expirar. Não emitimos reembolsos parciais nem créditos pelo encerramento dos planos no meio de um ciclo de cobrança. Caso tenha contratado a assinatura por meio de um terceiro, será necessário encerrar a assinatura por meio desse terceiro — por exemplo, se Você realizou sua assinatura por meio de um método de pagamento via App Store ou Google Play. O método de encerramento do serviço poderá variar conforme o provedor.</p>
+    <p><strong>O Plantonista não realiza quaisquer cobranças diretas à Você, tampouco solicita o cadastro de meios de pagamento. Desta forma, quaisquer cancelamentos deverão ser realizados diretamente no ambiente do provedor utilizado.</strong></p>
+    <p>O cancelamento encerrará a renovação automática, mantendo-se o acesso ativo até o fim do período pago.</p>
+    <p><strong>Você declara ciência de que a cobrança será mantida quanto ao período já contratado e pago, sendo que o cancelamento impedirá a renovação do plano ao fim do período pago.</strong></p>
+    <p>O Plantonista não realiza reembolso proporcional por período não utilizado, exceto quando exigido por lei.</p>
+
+    <h2>8. Exclusão</h2>
+    <p><strong>Constatado que Você violou os Termos aqui descritos, sem prejuízo de outras medidas, o Plantonista poderá advertir, suspender ou cancelar de forma temporária ou definitiva o seu cadastro.</strong></p>
+    <p><strong>Ao utilizar-se de meios suspeitos, inconvenientes, ou em desacordo aos Termos do Plantonista, para obter vantagem em serviços além daqueles disponibilizados pelo plano escolhido, tentar obter pelos mesmos meios, de forma inconveniente, descontos em planos que não aqueles disponibilizados em ocasiões específicas (por exemplo, por meio de cupons disponibilizados pelo Plantonista) ou inserir informações sigilosas, dados pessoais e/ou dados pessoais sensíveis de pacientes no aplicativo, poderá o Plantonista exercer seu direito de proteção, impedindo o acesso de forma definitiva de sua(s) conta(s) ou de terceiros envolvidos, sem a necessidade de qualquer notificação prévia.</strong></p>
+    <p>Você compromete-se a não solicitar chargebacks, contestações, estornos ou cancelamentos de pagamento de forma indevida ou de má-fé junto à plataforma de pagamento utilizada, operadoras de cartão, bancos ou intermediadores financeiros, especialmente quando o serviço tiver sido regularmente contratado, disponibilizado ou utilizado. Caso seja identificado chargeback indevido, poderemos suspender ou cancelar o seu acesso ao aplicativo, cobrar os valores em aberto, incluindo eventuais taxas, multas ou custos administrativos cobrados pelas plataformas de pagamento, bem como adotar as medidas cabíveis para recuperação do crédito, sem prejuízo de outras providências legais aplicáveis.</p>
+    <p>Em caso de suspensão, cancelamento ou encerramento da conta ou do seu acesso ao aplicativo em razão de violação destes Termos de Uso e/ou constatado o uso indevido deste, prática de fraude, má-fé, abuso de direito ou descumprimento de obrigações legais ou contratuais, não será devido qualquer reembolso, restituição, crédito ou compensação em relação aos valores já pagos, sem prejuízo da cobrança de valores eventualmente pendentes e da adoção das medidas legais cabíveis.</p>
+
+    <h2>9. Pontos de atenção ao utilizar a plataforma</h2>
+    <p><strong>Todos os resultados, demonstrativos e extratos matemáticos obtidos através das ferramentas de cálculo financeiro disponibilizadas pelo Plantonista são de sua responsabilidade integral, ao passo que tais serviços somente funcionam com o preenchimento de dados específicos pelo interessado, estando a exatidão dos mesmos sob sua integral responsabilidade, bem como deverão ser utilizados apenas como ferramenta de apoio, não dispensando a contratação e/ou consulta de um contador, de forma que o Plantonista não se responsabiliza por qualquer resultado equivocado em decorrência da má utilização das funções do aplicativo.</strong></p>
+    <p><strong>O Plantonista não se responsabiliza por qualquer erro de utilização em suas ferramentas, ao passo que determinadas incorreções tenham sido causadas por erros dos seus usuários, que são integralmente responsáveis pelos dados e grandezas matemáticas com os quais alimentam as ferramentas disponibilizadas.</strong></p>
+    <p>Todos os resultados obtidos através do aplicativo, desde cálculos, estimativas de trajetos e eventuais outros serviços que forem disponibilizados pelo Plantonista, estarão disponíveis em armazenamento em nuvem de propriedade do Plantonista.</p>
+
+    <h2>10. Propriedade intelectual</h2>
+    <p><strong>O Plantonista é o único proprietário de todos os direitos referentes ao conteúdo disponibilizado no aplicativo, incluindo, mas não se limitando à propriedade do SaaS (aplicativo), códigos-fonte, site, designs, marcas, domínio, subdomínios, logotipos, nomes comerciais, layouts, gráficos, design de interface, imagens, ilustrações, fotografias, apresentações, vídeos, conteúdos escritos, conteúdos de áudio, programas de computador, banco de dados, arquivos de transmissão e quaisquer outras informações relacionadas e disponibilizadas no site ou aplicativo.</strong></p>
+    <p><strong>É expressamente proibido qualquer tipo de cópia, alteração, distribuição, exposição, licenciamento, modificação, reprodução, prática de engenharia reversa de qualquer modalidade ou utilizar a Propriedade Intelectual do Plantonista de qualquer forma sem autorização prévia por escrito. Da mesma forma, é proibida a utilização da Propriedade Intelectual de Terceiros que vierem a disponibilizar qualquer ativo intelectual no aplicativo do Plantonista.</strong></p>
+    <p><strong>Você não é, sob nenhuma hipótese, autorizado a acessar os nossos códigos fonte, servidores e bancos de dados, assim como informações confidenciais a eles relacionadas.</strong></p>
+    <p><strong>Você, por meio destes Termos e durante sua vigência, recebe uma licença não exclusiva, não transferível e limitada, para acessar o aplicativo, planos disponibilizados e fazer uso dos serviços.</strong></p>
+    <p><strong>Dessa forma, o uso do aplicativo e dos serviços por Você é pessoal, individual e intransferível, sendo vedado qualquer uso não autorizado, comercial ou não-comercial, situação em que o Plantonista terá o direito de indenização pelos danos que vierem a ser apurados em razão da violação.</strong></p>
+    <p><strong>O Plantonista possui plena autonomia para integrar outros serviços em seu aplicativo, inclusive fornecidos por Terceiros, a fim de possibilitar uma melhor experiência a Você. Todos os serviços que forem fornecidos por terceiros são de responsabilidade única e exclusiva do fornecedor, não tendo o Plantonista qualquer responsabilidade.</strong></p>
+    <p><strong>Nos casos em que alguma funcionalidade do aplicativo seja fornecida por Terceiros, poderá haver a necessidade do seu aceite e concordância. Este aceite deverá ser feito diante das condições de uso do fornecedor, não estando vinculadas ao Plantonista. A não concordância poderá limitar o seu acesso aos serviços do aplicativo.</strong></p>
+    <p><strong>Toda e qualquer integração com serviços de Terceiros não gera nenhum tipo de vínculo entre o Terceiro e o Plantonista, razão pela qual o Plantonista não se responsabiliza pelos termos e condições impostos pelo Terceiro, recomendando que, antes de aceitar qualquer condição, Você realize a leitura adequada dos termos.</strong></p>
+    <p><strong>Sendo assim, o Plantonista não possui qualquer responsabilidade em relação a websites ou demais destinos de links que te levem para fora do ambiente virtual do aplicativo. Da mesma forma, o Plantonista não se responsabiliza por anúncios ou materiais de terceiros inseridos no aplicativo e nos serviços, nem pelos produtos e serviços anunciados.</strong></p>
+    <p><strong>Alguns dos serviços do Plantonista poderão permitir que Você realize o download de relatórios, utilizando-se das informações inseridas por Você no aplicativo durante o uso dos serviços. Nesses casos, Você se responsabilizará por quaisquer usos que delas sejam feitos, ressaltando que os relatórios gerados pelo Plantonista não dispensam a atuação de demais profissionais, tal como a figura do contador, de modo que não cabe ao Plantonista se responsabilizar pelo uso de informações fora do ambiente do aplicativo.</strong></p>
+
+    <h2>11. Limitação de responsabilidade</h2>
+    <p>Você declara estar ciente e concorda expressamente que o aplicativo Plantonista é disponibilizado "no estado em que se encontra" e "conforme disponível", sem garantias de funcionamento contínuo, ininterrupto, livre de falhas, erros, indisponibilidades, interrupções, atrasos, instabilidades, vulnerabilidades ou incompatibilidades técnicas.</p>
+    <p>O Plantonista não garante que o aplicativo, suas funcionalidades, conteúdos, informações, integrações, servidores ou serviços correlatos estarão disponíveis de forma permanente, ininterrupta ou isenta de erros, tampouco que eventuais falhas, defeitos ou instabilidades serão corrigidos em prazo determinado.</p>
+    <p><strong>No mesmo sentido, o Plantonista não garante a exatidão, disponibilidade ou atualização dos dados de trânsito utilizados na funcionalidade "Hora de Sair", os quais podem sofrer variações por fatores externos, como congestionamentos, acidentes, obras, condições climáticas ou falhas em serviços de terceiros.</strong></p>
+    <p><strong>O Plantonista não se responsabiliza por perda, corrupção, indisponibilidade ou exclusão de dados decorrente de falhas no seu dispositivo, problemas de conexão, mau uso do aplicativo, ausência de backup, interrupções de energia, falhas de sistema operacional ou outros eventos fora de nosso controle razoável.</strong></p>
+    <p><strong>Na máxima extensão permitida pela legislação aplicável, o Plantonista não se responsabiliza por decisões financeiras, fiscais, operacionais ou de qualquer outra natureza tomadas com base nas informações disponibilizadas no aplicativo. Você compreende que os cálculos de impostos, tributos, valores estimados ou projeções apresentadas pelo aplicativo possuem caráter meramente informativo e aproximado, não substituindo a orientação de contador, consultor fiscal ou outro profissional habilitado.</strong></p>
+    <p><strong>No âmbito da presente cláusula, em nenhuma circunstância o Plantonista, seus diretores, executivos, funcionários ou agentes serão responsáveis perante Você ou qualquer outra parte por danos indiretos, consequenciais, especiais, incidentais, punitivos ou exemplares de qualquer tipo, incluindo perda de receita ou lucros ou perda de negócios, resultantes das limitações aqui descritas.</strong></p>
+    <p><strong>Em qualquer hipótese, a responsabilidade total do Plantonista perante o usuário ficará limitada ao valor efetivamente pago pelo usuário a título de assinatura nos 12 (doze) meses anteriores ao evento que deu origem à reclamação, ressalvadas as hipóteses em que a legislação aplicável determine de forma diversa.</strong></p>
+
+    <h2>12. Disposições finais</h2>
+    <p>Você autoriza que o Plantonista crie canais de comunicação diretos ou indiretos, seja por e-mail, redes sociais, notificações de celular e outras modalidades, a fim de que o aplicativo possa manter Você informado sobre os seus serviços da melhor maneira possível.</p>
+    <p><strong>Você reconhece que as peculiaridades de uso do aplicativo e dos serviços do Plantonista foram suficientemente descritas nestes termos e que o aplicativo cumpre devidamente o dever de informação.</strong></p>
+    <p><strong>Os Termos poderão ser modificados e atualizados a qualquer momento, cujas alterações serão previamente informadas à Você dentro do aplicativo.</strong></p>
+    <p>As partes reconhecem, para todos os fins e efeitos de direito, que o presente Termo de Uso constitui título executivo extrajudicial, estando sujeito à execução específica, nos termos do disposto no Código de Processo Civil.</p>
+    <p>O presente Termo é celebrado dentro dos princípios da boa-fé e é parte integrante e indissociável de todas as políticas de funcionamento do Plantonista, incluindo, mas não se limitando à Política de Privacidade, as quais tratam exclusivamente dos assuntos destinados em cada qual.</p>
+    <p>Este documento é regido pelas leis da República Federativa do Brasil.</p>
+    <p>Caso não seja possível solucionar amigavelmente qualquer desavença relacionada aos Termos, fica eleito o Foro da Comarca de São Paulo/SP como o competente para dirimir quaisquer questões porventura oriundas do presente documento, com expressa renúncia a qualquer outro, por mais privilegiado que seja.</p>
+  </div>
+</div>
+
+<footer>Plantonista © 2026 — Todos os direitos reservados.</footer>
 
 </body>
 </html>
